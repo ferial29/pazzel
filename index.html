@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery-ui.js"></script>
+    <style>
+        #d1,#d2,#d3,#d4,#d5,#d6
+        {
+            width:300px;
+            height:218px;
+            padding: 2px;
+            /* text-align: center; */
+            background-color: silver;
+            /* border-radius: 15px; */
+            /* min-height: 150px;
+            font-weight: bold; */
+            float: left;
+            margin: 2px;
+            list-style: none;
+        }
+        #container{
+            float: left;
+            width: 620px;
+            height: 680px;
+            background-color: burlywood;
+        }
+        #d7{
+            width: 200px;
+            height:200px;
+            background-image: url(images/2.jpg);
+            position: relative;
+            top: 10px;
+            left:1350px;
+            background-size: cover;
+       
+            
+        }
+        #timer {
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 1350px;
+  
+  font-size: 50px;
+
+}
+        
+      
+        #d1{
+            background-image: url(images/1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #d2{
+            background-image: url(images/2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #d3{
+            background-image: url(images/3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #d4{
+            background-image: url(images/4.png);
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+        }
+        #d5{
+            background-image: url(images/5.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #d6{
+            background-image: url(images/6.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+    </style>
+
+    <script>
+        // timer
+        window.onload = function(){
+
+var second = 01;
+var minute = 03;
+
+setInterval(function(){
+  document.getElementById("timer").innerHTML = minute + ":" + second;
+
+  second--;
+
+  if(second == 00){
+    minute--;
+    second = 60;
+  }
+  if(minute == 0 && second == 1){
+    document.getElementById("timer").innerHTML = "Timer Stopped";
+    alert("time is finish");
+  }
+  if(minute <= -1) {
+    document.getElementById("timer").innerHTML = " ";
+  }
+}, 1000);
+var local=getElementById("localStorage").innerHTML
+// localStorage().innerHTML=local;
+getElementById(p1).innertext=local
+
+
+// for(var i in localStorage) {
+//     console.log(i + ' = ' + localStorage[i]);
+// }
+
+
+
+}
+// timer
+        
+        $(document).ready(function () {
+   
+        $("#container").sortable();
+
+
+            
+            
+        })
+    </script>
+    
+    
+</head>
+<body>
+
+    <!-- <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div> -->
+
+<ui id="container">
+<li id="d3"></li>
+<li id="d5"></li>
+<li id="d1"></li>
+<li id="d6"></li>
+<li id="d4"></li>
+<li id="d2"></li>
+
+</ui>
+<li id="d7"></li>
+<h1 id="timer"></h1>
+<p id="p1"></p>
+
+
+
+
+
+</body>
+</html>
